@@ -14,13 +14,13 @@ const Header = () => {
             <div>
                 <img src={Logo} alt="" />
             </div>
-            <div className='flex flex-row justify-between border-2 border-blue-500 rounded-s-md h-8'>
-                <input type="text" className='max-w-xl pl-5 border-blue-500 focus:outline-none focus:ring-0' />
+            <div className='flex flex-row justify-between  border-blue-500 h-8'>
+                <input type="text" className='w-96 px-1 border-2 border-blue-500 rounded-sm focus:outline-none focus:ring-0' />
                 <div className='flex flex-row '>
-                    <select name="All category" id="1" className='border-x-2 border-blue-500 focus:outline-none  w-28' >
+                    <select name="All category" id="1" className='border-y-2 border-blue-500 focus:outline-none  w-28' >
                         <option value="All category">All category</option>
                     </select>
-                    <button className='bg-blue-500 text-white w-20  border-none'>Search</button>
+                    <button className='bg-blue-500 text-white w-20  rounded-r-md'>Search</button>
                 </div>
             </div>
             <nav >

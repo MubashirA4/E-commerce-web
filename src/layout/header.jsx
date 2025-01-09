@@ -10,7 +10,7 @@ import { Link, Links } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header className='flex flex-row justify-between p-4 mt-1'>
+        <header className='flex flex-row items-center justify-between  mt-1'>
             <div>
                 <img src={Logo} alt="" />
             </div>

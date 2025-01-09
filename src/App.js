@@ -3,7 +3,7 @@ import Layout from "./layout";
 
 function App() {
   return (
-    <div className="App max-w-screen-lg mx-auto">
+    <div className="App container mx-auto">
       <Layout>
         {/* <Routes><Route path="/" element={</>}/></Routes> */}
       </Layout>

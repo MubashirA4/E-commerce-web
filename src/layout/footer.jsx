@@ -15,19 +15,19 @@ const Footer = () => {
     <footer className='flex flex-row justify-between'>
       <div className='logo'>
         <Link to="/"><img src={Logo} alt="" /></Link>
-        <p className='font-sans text-gray-500'>Best information about the company <br /> gies here but now lorem ipsum is</p>
-        <ul className='flex flex-row gap-2'>
-          <li><Link><TiSocialFacebook className="bg-gray-300 rounded-xl text-white size-5" /></Link></li>
-          <li><Link><TiSocialTwitter className="bg-gray-300 rounded-xl text-white p-0.5 size-5" /></Link></li>
-          <li><Link><TiSocialLinkedin className="bg-gray-300 rounded-xl text-white size-5" /></Link></li>
-          <li><Link><TiSocialInstagram className="bg-gray-300 rounded-xl text-white p-0.5 size-5" /></Link></li>
-          <li><Link><TiSocialYoutube className="bg-gray-300 rounded-xl text-white p-1 size-5" /></Link></li>
+        <p className='font-sans mt-3 text-gray-500'>Best information about the company <br /> gies here but now lorem ipsum is</p>
+        <ul className='flex flex-row gap-2 mt-3'>
+          <li><Link><TiSocialFacebook className="bg-gray-300 rounded-xl text-white size-6" /></Link></li>
+          <li><Link><TiSocialTwitter className="bg-gray-300 rounded-xl text-white p-0.5 size-6" /></Link></li>
+          <li><Link><TiSocialLinkedin className="bg-gray-300 rounded-xl text-white size-6" /></Link></li>
+          <li><Link><TiSocialInstagram className="bg-gray-300 rounded-xl text-white p-0.5 size-6" /></Link></li>
+          <li><Link><TiSocialYoutube className="bg-gray-300 rounded-xl text-white p-1 size-6" /></Link></li>
         </ul>
       </div>
       <div className='grid grid-cols-4 gap-10'>
         <div>
           <h2 class="font-medium text-xl text-gray-800">About</h2>
-          <ul className='font-sans text-gray-400'>
+          <ul className='font-sans text-gray-400 mt-3'>
             <li>
               <Link to="/">About us</Link>
             </li>
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 class="font-medium text-xl text-gray-800">Partenership</h2>
-          <ul className='font-sans text-gray-400'>
+          <ul className='font-sans text-gray-400 mt-3'>
             <li>
               <Link to="/">About us</Link>
             </li>
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 class="font-medium text-xl text-gray-800">Information</h2>
-          <ul className='font-sans text-gray-400'>
+          <ul className='font-sans text-gray-400 mt-3'>
             <li>
               <Link to="/">Help Center</Link>
             </li>
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
         <div>
           <h2 class="font-medium text-xl text-gray-800">For users</h2>
-          <ul className='font-sans text-gray-400'>
+          <ul className='font-sans text-gray-400 mt-3'>
             <li>
               <Link to="/">Login</Link>
             </li>

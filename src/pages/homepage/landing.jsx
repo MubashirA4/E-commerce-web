@@ -9,7 +9,7 @@ const Landing = () => {
         <>
             <NavBar />
             <section className='flex flex-row border p-4  border-gray-200'>
-                <aside className='w-1/4'>
+                <aside className='w-1/5'>
                     <ul className='font-sans text-gray-500 '>
                         <li className='w-full py-1 pl-2 focus-within:bg-teal-50 rounded-md'>
                             <Link to="/">Automobiles</Link>
@@ -40,24 +40,24 @@ const Landing = () => {
                         </li>
                     </ul>
                 </aside>
-                <main className="w-2/4">
+                <main className="w-3/5">
                     <div className="relative">
                         <div className="">
-                            <img src={Banner} alt="" className='w-full h-max' />
+                            <img src={Banner} alt="" className='w-full ' />
                         </div>
                         <div className="absolute top-11 left-8">
-                            <h4 className="font-sans text-gray-800 text-xl">
+                            <h4 className="font-sans text-gray-800 text-2xl">
                                 Latest trending
                                 <br />
-                                <span className="font-bold text-2xl">Electronic items</span>
+                                <span className="font-bold text-3xl">Electronic items</span>
                             </h4>
-                            <div className="bg-white py-1 px-3 rounded-md w-fit items-center">
+                            <div className="bg-white mt-3 py-1 px-3 rounded-md w-fit items-center">
                                 <Link to='/' className="font-medium text-sm">Learn more</Link>
                             </div>
                         </div>
                     </div>
                 </main>
-                    <div className='w-1/4 ml-9'>
+                    <div className='w-1/5 ml-9'>
                         <div className="bg-teal-100 p-4 rounded-md  ">
                             <div className="flex flex-row gap-3 items-center">
                                 <div className="bg-blue-300 rounded-full p-2">

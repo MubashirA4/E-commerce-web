@@ -4,7 +4,7 @@ import HomePage from "./pages/homepage";
 
 function App() {
   return (
-    <div className="App container mx-auto">
+    <div className="App bg-background">
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

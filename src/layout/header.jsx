@@ -10,7 +10,8 @@ import { Link, Links } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <header className='flex flex-row items-center justify-between  mt-1'>
+        <header className='bg-white '>
+            <div className='container mx-auto flex flex-row items-center justify-between py-2  mt-1'>
             <div>
                 <img src={Logo} alt="" />
             </div>
@@ -31,7 +32,9 @@ const Header = () => {
                     <li><Link to="/cart"><img src={CartIcon} alt="Cart" width={40} /></Link></li>
                 </ul>
             </nav>
+        </div>
         </header>
+        
     )
 }
 

@@ -5,7 +5,8 @@ import Flag2 from '../assets/flag.png'
 
 const NavBar = () => {
     return (
-        <nav className='flex flex-row justify-between py-3 border-y my-4 border-gray-200 font-medium text-gray-700'>
+        <div className='bg-white border-y'>
+            <nav className='container mx-auto flex flex-row justify-between py-3  border-gray-200 font-medium text-gray-700'>
             <ul className='flex flex-row items-center gap-3'>
                 <li><Link to="/"><FaBars /></Link></li>
                 <li><Link to="/">All category</Link></li>
@@ -31,6 +32,8 @@ const NavBar = () => {
                 </li>
             </ul>
         </nav>
+        </div>
+        
     )
 }
 

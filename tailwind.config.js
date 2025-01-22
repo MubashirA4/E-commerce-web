@@ -17,11 +17,14 @@ module.exports = {
         Primary: '#1C1C1C',
         customZinc: '#D1E7FF', // Add your custom color here
         customGray: '#8B96A5',
+        customGray2: '#505050',
         background: '#F7FAFC',
         background2: '#EFF2F4',
         background3: '#BDC4CD',
         focus: '#E5F1FF',
         customborder: '#E0E0E0',
+        customLblue: '#0D6EFD',
+        customborder: '#DEE2E7'
       }
 
     },

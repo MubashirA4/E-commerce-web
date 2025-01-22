@@ -15,8 +15,8 @@ const Header = () => {
             <div>
                 <img src={Logo} alt="" />
             </div>
-            <div className='flex flex-row justify-between  border-blue-500 h-8'>
-                <input type="text" className='w-96 px-1 border-2 border-blue-500 rounded-sm focus:outline-none focus:ring-0' />
+            <div className='flex flex-row justify-between border-blue-500 h-8'>
+                <input type="text" className='w-96 px-1 border-2 border-blue-500 focus:outline-none focus:ring-0' />
                 <div className='flex flex-row '>
                     <select name="All category" id="1" className='border-y-2 border-blue-500 focus:outline-none  w-28' >
                         <option value="All category">All category</option>

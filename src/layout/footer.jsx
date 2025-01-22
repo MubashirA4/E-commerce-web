@@ -11,8 +11,8 @@ import Playstore from '../assets/playstore.png'
 
 const Footer = () => {
   return (
-    <div className='container mx-auto'>
-      <footer className='flex flex-row justify-between py-8'>
+    <div className=' bg-white'>
+      <footer className='container mx-auto flex flex-row justify-between py-8'>
       <div className='logo'>
         <Link to="/"><img src={Logo} alt="" /></Link>
         <p className='font-sans mt-3 text-gray-500'>Best information about the company <br /> gies here but now lorem ipsum is</p>

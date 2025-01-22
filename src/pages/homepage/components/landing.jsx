@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../../../components/navbar'
+import CategoryNavbar from '../../../layout/categorynavbar'
 import { Link } from 'react-router-dom'
 import Banner from '../../../assets/Banner-board.png'
 import Profile from '../../../assets/profile(1).png'
@@ -7,7 +7,7 @@ import Profile from '../../../assets/profile(1).png'
 const Landing = () => {
     return (
         <>
-            <NavBar />
+            <CategoryNavbar />
             <main className='bg-background'>
                 <section className='container mx-auto bg-white flex flex-row gap-2 justify-between  border p-4 mt-4 border-gray-200 rounded-lg'>
                     <aside className='w-1/5'>

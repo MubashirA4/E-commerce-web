@@ -1,5 +1,5 @@
 import React from 'react'
-import { Brand } from '../../../components/brand'
+import Brand from '../../../components/brand'
 import { Services } from '../../../components/services'
 import Region from '../../../components/region'
 import Tshirt from '../../../assets/Clothes/T-shirt.png'
@@ -21,24 +21,45 @@ import InventoryIcon from '../../../assets/services/Vector.png'
 import ArrowIcon from '../../../assets/services/Vector2.png'
 import DefenceIcon from '../../../assets/services/security2.png'
 import UAE from '../../../assets/region/UAE flag.png'
+import { Link } from 'react-router-dom'
 
 
 export const Recommended = () => {
     return (
-        <div className='container mx-auto'>  
+        <div className='container mx-auto'>
             <div className='mt-3'>
                 <h4 className='font-semibold text-xl text-Primary'>Recommended items</h4>
                 <div className='grid lg:grid-cols-5 gap-5 mt-4'>
-                    <Brand image={Tshirt} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Jacket} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Purse} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Bag} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Coat} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Shorts} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Headphone} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Watch} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Phone} title='$10.30' desc='T-shirts with multiple colors, for men' />
-                    <Brand image={Camera} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    <Link to='/orderdetail'>
+                        <Brand image={Tshirt} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Jacket} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Purse} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Bag} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Coat} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Shorts} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Headphone} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Watch} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Phone} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
+                    <Link to='/orderdetail'>
+                        <Brand image={Camera} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                    </Link>
                 </div>
             </div>
             <div className='mt-3'>
@@ -51,19 +72,19 @@ export const Recommended = () => {
                 </div>
             </div>
             <div>
-            <h4 className='font-semibold text-xl text-Primary my-5'>Suppliers by region</h4>
-            <div className='grid grid-cols-5 gap-4'>
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-                <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
-            </div>
+                <h4 className='font-semibold text-xl text-Primary my-5'>Suppliers by region</h4>
+                <div className='grid grid-cols-5 gap-4'>
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                    <Region img={UAE} title='Arabic Emirates' desc='shopname.ae' />
+                </div>
             </div>
         </div>
     )

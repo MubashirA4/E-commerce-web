@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Brand = ({image, title, desc}) => {
+const Brand = ({image, title, desc, className=''}) => {
   return (
-    <div className="flex flex-col justify-between py-4 border border-customborder rounded-md bg-white shadow-sm ">
+    <div className={`border border-customborder h-full rounded-md bg-white shadow-sm ${className}`}>
       <div className="flex flex-col items-center"> 
         <img src={image} alt="" className="w-32 " />
       </div>
@@ -13,3 +13,4 @@ export const Brand = ({image, title, desc}) => {
     </div>
   )
 }
+export default Brand

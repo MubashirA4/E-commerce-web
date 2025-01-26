@@ -13,7 +13,9 @@ const Header = () => {
         <header className='bg-white '>
             <div className='container mx-auto flex flex-row items-center justify-between py-2  mt-1'>
             <div>
+                <Link to='/'>
                 <img src={Logo} alt="" />
+                </Link>
             </div>
             <div className='flex flex-row justify-between border-blue-500 h-8'>
                 <input type="text" className='w-96 px-1 border-2 border-blue-500 focus:outline-none focus:ring-0' />

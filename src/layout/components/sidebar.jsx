@@ -19,11 +19,11 @@ const Sidebar = () => {
         }));
     }
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto '>
             <aside>
-                <ul className="mt-4">
+                <ul className="">
                     {/* Category */}
-                    <li className="px-4 py-2">
+                    <li className=" ">
                         <div className="flex items-center justify-between cursor-pointer border-t"
                             onClick={() => toggleDown("category")} >
                             <span className='font-semibold text-Primary text-base mt-2'>Category</span>
@@ -49,7 +49,7 @@ const Sidebar = () => {
                         )}
                     </li>
                     {/* Brands */}
-                    <li className="px-4 py-2">
+                    <li className=" py-2">
                         <div className="flex items-center justify-between cursor-pointer border-t"
                             onClick={() => toggleDown("brands")} >
                             <span className='font-semibold text-Primary text-base mt-2'>Brands</span>
@@ -92,7 +92,7 @@ const Sidebar = () => {
                         )}
                     </li>
                     {/* features */}
-                    <li className="px-4 py-2">
+                    <li className=" py-2">
                         <div className="flex items-center justify-between cursor-pointer border-t"
                             onClick={() => toggleDown("features")} >
                             <span className='font-semibold text-Primary text-base mt-2'>Features</span>
@@ -134,7 +134,7 @@ const Sidebar = () => {
                         )}
                     </li>
                     {/* Price Range */}
-                    <li className="px-4 py-2">
+                    <li className=" py-2">
                         <div className="flex items-center justify-between cursor-pointer border-t"
                             onClick={() => toggleDown("range")} >
                             <span className='font-semibold text-Primary text-base mt-2'>Price Range</span>
@@ -156,7 +156,7 @@ const Sidebar = () => {
                         )}
                     </li>
                     {/* Condition */}
-                    <li className="px-4 py-2">
+                    <li className=" py-2">
                         <div className="flex items-center justify-between cursor-pointer border-t"
                             onClick={() => toggleDown("condition")} >
                             <span className='font-semibold text-Primary text-base mt-2'>Condition</span>
@@ -193,7 +193,7 @@ const Sidebar = () => {
                         )}
                     </li>
                     {/* Ratings */}
-                    <li className="px-4 py-2">
+                    <li className=" py-2">
                         <div className="flex items-center justify-between cursor-pointer border-t"
                             onClick={() => toggleDown("ratings")} >
                             <span className='font-semibold text-Primary text-base mt-2'>Features</span>
@@ -218,7 +218,6 @@ const Sidebar = () => {
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
                                     </div>
                                 </li>
                                 <li className="flex items-center font-regular text-base text-customGray2">
@@ -228,8 +227,7 @@ const Sidebar = () => {
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className=' w-5 h-5'/>
+                                        <IoMdStar className='text-background3 w-5 h-5'/>
                                     </div>
                                 </li>
                                 <li className="flex items-center font-regular text-base text-customGray2">
@@ -238,9 +236,8 @@ const Sidebar = () => {
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='w-5 h-5'/>
-                                        <IoMdStar className='w-5 h-5'/>
+                                        <IoMdStar className='text-background3 w-5 h-5'/>
+                                        <IoMdStar className='text-background3 w-5 h-5'/>
                                     </div>
                                 </li>
                                 <li className="flex items-center font-regular text-base text-customGray2">
@@ -248,10 +245,9 @@ const Sidebar = () => {
                                     <div className='flex ml-2 gap-0'>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
                                         <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className=' w-5 h-5'/>
-                                        <IoMdStar className='w-5 h-5'/>
-                                        <IoMdStar className='w-5 h-5'/>
+                                        <IoMdStar className='text-background3 w-5 h-5'/>
+                                        <IoMdStar className='text-background3 w-5 h-5'/>
+                                        <IoMdStar className='text-background3 w-5 h-5'/>
                                     </div>
                                 </li>
                             </ul>

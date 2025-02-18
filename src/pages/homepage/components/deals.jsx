@@ -5,6 +5,7 @@ import Laptop from '../../../assets/laptop.png'
 import Camera from '../../../assets/camera.png'
 import Headphone from '../../../assets/headphone.png'
 import Phone from '../../../assets/phone.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -35,15 +36,35 @@ const Deals = () => {
                     </div>
                 </div>
                 <div className='grid lg:grid-cols-5 lg:w-full'>
-                    <div className=""> <Card image={Watch} title="Smart Matches" desc='-25%' /> </div>
-                    <div className=""> <Card image={Laptop} title="Laptops" desc='-15%' /> </div>
-                    <div className=""> <Card image={Camera} title="GoPro cameras" desc='-40%' /> </div>
-                    <div className=""> <Card image={Headphone} title="Headphones" desc='-25%' /> </div>
-                    <div className=""> <Card image={Phone} title="Canon cameras" desc='-25%' /> </div>
+                    <div className="">
+                        <Link to='orderdetail'>
+                            <Card image={Watch} title="Smart Matches" desc='-25%' />
+                        </Link>
+                    </div>
+                    <div className="">
+                        <Link to='orderdetail'>
+                            <Card image={Laptop} title="Laptops" desc='-15%' />
+                        </Link>
+                    </div>
+                    <div className="">
+                        <Link to='orderdetail'>
+                            <Card image={Camera} title="GoPro cameras" desc='-40%' />
+                        </Link>
+                    </div>
+                    <div className="">
+                        <Link to='orderdetail'>
+                            <Card image={Headphone} title="Headphones" desc='-25%' />
+                        </Link>
+                    </div>
+                    <div className="">
+                        <Link to='orderdetail'>
+                            <Card image={Phone} title="Canon cameras" desc='-25%' />
+                        </Link>
+                    </div>
                 </div>
             </div>
-           
-           
+
+
         </div>
     )
 }

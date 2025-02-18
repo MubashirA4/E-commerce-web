@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BackgroundI from '../../../assets/background/image.png'
 const Inquiry = () => {
+    const [Value, setValue] = useState('')
+
+    const options = ['1', '2', '3', '4']
+
+    const handleSelectChange = (e) => {
+        setValue(e.target.value)
+    }
+    const handleInputChange = (e) => {
+        setValue(e.target.value)
+    }
+
     return (
         <div className='container mx-auto bg-white mt-4 '>
             <div
@@ -34,25 +45,32 @@ const Inquiry = () => {
                                     name=""
                                     id=""
                                     placeholder="Type more details"
-                                    className="w-full placeholder-gray-500 p-1 mb-4 border rounded"
+                                    className="w-full placeholder-gray-500 p-1 mb-4 border rounded h-fit"
                                 ></textarea>
                                 <div className="flex gap-2">
                                     <input
                                         type="text"
                                         className="placeholder-black p-1 border rounded "
                                         placeholder="Quantity"
+                                        value={Value}
+                                        onChange={handleInputChange}
                                     />
                                     <select
-                                        name=""
-                                        id=""
+                                        value={Value}
+                                        onChange={handleSelectChange}
                                         className="flex items-center p-2 border rounded appearance-none bg-white text-black pr-8"
                                         style={{
                                             backgroundImage: 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\' fill=\'%238B96A5\'%3E%3Cpath fill-rule=\'evenodd\' d=\'M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z\' clip-rule=\'evenodd\'/%3E%3C/svg%3E")',
                                             backgroundPosition: 'right 0.5rem center',
                                             backgroundRepeat: 'no-repeat',
                                             backgroundSize: '1rem 1rem',
-                                        }}
-                                    >                                        <option value="">Pcs</option>
+                                        }}>
+                                            <option value="">Pcs</option>
+                                        {options.map((option, index) => (
+                                            <option key={index} value={option}>
+                                                {option}
+                                            </option>
+                                        ))}
                                     </select>
                                 </div>
                                 <button className="bg-gradient-to-r from-[#127FFF] to-[#0067FF] text-white font-semibold py-1 px-3 mt-3 rounded shadow-lg hover:opacity-90">

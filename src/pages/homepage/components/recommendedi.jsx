@@ -11,8 +11,8 @@ import Shorts from '../../../assets/Clothes/short jeans.png'
 import Headphone from '../../../assets/headphone.png'
 import Watch from '../../../assets/watch.png'
 import Phone from '../../../assets/phone.png'
-import Camera from '../../../assets/camera.png'
-import Sourehub from '../../../assets/services/image 1.png'
+import Camera from '../../../assets/Image.png'
+import Sourehub from '../../../assets/services/source.svg'
 import Colors from '../../../assets/services/image 2.png'
 import Aeroplane from '../../../assets/services/Aeroplane.png'
 import Man from '../../../assets/services/Man.png'
@@ -34,31 +34,31 @@ export const Recommended = () => {
                         <Brand image={Tshirt} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Jacket} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Jacket} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Purse} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Purse} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Bag} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Bag} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Coat} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Coat} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Shorts} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Shorts} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Headphone} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Headphone} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Watch} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Watch} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Phone} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Phone} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
                     </Link>
                     <Link to='/orderdetail'>
-                        <Brand image={Camera} title='$10.30' desc='T-shirts with multiple colors, for men' />
+                        <Brand image={Camera} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
                     </Link>
                 </div>
             </div>

@@ -1,14 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { IoMdStar } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 
 
-const MobileCard = ({ img, title, price, discount, order, Fship ,para, details, className = '', imgWidth = '', imgHeight = '' }) => {
+const CardRow = ({ img, title, price, discount, order, Fship ,para, details }) => {
     return (
-        <div className={`bg-white ${className}`} >
+        <div className="flex bg-white" >
             <div className=''>
-                <img src={img} alt="" className={`${imgWidth} ${imgHeight}`} />
+                <img src={img} alt="" className="lg:w-96 lg:h-44 xl:w-60" />
             </div>
             <div className='flex'>
             <div >
@@ -16,10 +15,10 @@ const MobileCard = ({ img, title, price, discount, order, Fship ,para, details, 
                 <h2 className='font-semibold text-xl text-Primary mt-3'>{price} <del className='text-customGray text-base'>{discount} </del> </h2>
                 <div className='flex gap-6'>
                     <div className='flex items-center gap-0'>
-                        <IoMdStar className='text-orange-500 w-4 h-4' />
-                        <IoMdStar className='text-orange-500 w-4 h-4' />
-                        <IoMdStar className='text-orange-500 w-4 h-4' />
-                        <IoMdStar className='text-orange-500 w-4 h-4' />
+                        <IoMdStar className='text-customorange w-4 h-4' />
+                        <IoMdStar className='text-customorange w-4 h-4' />
+                        <IoMdStar className='text-customorange w-4 h-4' />
+                        <IoMdStar className='text-customorange w-4 h-4' />
                         <IoMdStar className='text-background3 w-4 h-4' />
                         <p className='font-regular text-base text-orange-500 ml-1'>7.5</p>
                     </div>
@@ -43,4 +42,4 @@ const MobileCard = ({ img, title, price, discount, order, Fship ,para, details, 
     )
 }
 
-export default MobileCard
+export default CardRow

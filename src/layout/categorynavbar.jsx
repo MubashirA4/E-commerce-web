@@ -7,6 +7,7 @@ const CategoryNavbar = () => {
     return (
         <div className='bg-white border-y'>
             <nav className='container mx-auto flex flex-row justify-between py-3  border-gray-200 font-medium text-gray-700'>
+               {/* Left side navigation */}
                 <ul className='flex flex-row items-center gap-3'>
                     <li><Link to="/"><FaBars /></Link></li>
                     <li><Link to="/">All category</Link></li>
@@ -16,6 +17,7 @@ const CategoryNavbar = () => {
                     <li><Link to="/">Menu item</Link></li>
                     <li><Link to="/">Help</Link></li>
                 </ul>
+                {/* Right side navigation */}
                 <ul className='flex flex-row gap-5'>
                     <li>
                         <select>

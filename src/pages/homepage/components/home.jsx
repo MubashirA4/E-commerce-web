@@ -9,6 +9,7 @@ import Mixer from '../../../assets/mixer.png'
 import Blender from '../../../assets/blender.png'
 import Appliance from '../../../assets/appliances.png'
 import Plant from '../../../assets/plant.png'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -22,28 +23,44 @@ const Home = () => {
             </div>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full'>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={SoftChair} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Lamp} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Dish} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Swatch} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Mixer} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Blender} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Appliance} />
+                    </Link>
                 </div>
                 <div className=''>
+                    <Link to='/orderdetail'>
                     <Card2 title="Soft chairs" desc='From' price='USD 19' img={Plant} />
+                    </Link>
                 </div>
             </div>
         </div>

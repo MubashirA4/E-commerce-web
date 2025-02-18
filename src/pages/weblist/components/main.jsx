@@ -1,6 +1,6 @@
 import React from 'react'
 import FeatureNav from '../../../layout/components/featuresnav'
-import MobileCard from '../../../components/mobilecard'
+import CardRow from '../../../components/Mobile/cardrow';
 import Cannon from '../../../assets/mobile/canon EOS 2000.png'
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -10,49 +10,28 @@ const Main = () => {
     <div className=''>
       <FeatureNav />
       <div className='border bg-white border-customborder mt-4 rounded-md p-4'>
-        <MobileCard img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
-        order='154 order' Fship='Free Shipping'
-          para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          details='View details'
-          className='flex'
-          imgWidth='w-96' 
-          imgHeight='h-44'
+        <CardRow img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
+          order='154 order' Fship='Free Shipping' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' details='View details'
         />
       </div>
       <div className='border bg-white border-customborder mt-4 rounded-md p-4'>
-        <MobileCard img={Cannon} title='GoPro HERO6 4K Action Camera - Black' price='$998.00' discount='$1128.00'
-          para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          details='View details'
-          className='flex'
-          imgWidth='w-96'
-          imgHeight='h-44'
+      <CardRow img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
+          order='154 order' Fship='Free Shipping' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' details='View details'
         />
       </div>
       <div className='border bg-white border-customborder mt-4 rounded-md p-4'>
-        <MobileCard img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
-          para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          details='View details'
-          className='flex'
-          imgWidth='w-96'
-          imgHeight='h-44'
+      <CardRow img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
+          order='154 order' Fship='Free Shipping' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' details='View details'
         />
       </div>
       <div className='border bg-white border-customborder mt-4 rounded-md p-4'>
-        <MobileCard img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
-          para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          details='View details'
-          className='flex'
-          imgWidth='w-96'
-          imgHeight='h-44'
+      <CardRow img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
+          order='154 order' Fship='Free Shipping' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' details='View details'
         />
       </div>
       <div className='border bg-white border-customborder mt-4 rounded-md p-4'>
-        <MobileCard img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
-          para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
-          details='View details'
-          className='flex'
-          imgWidth='w-96'
-          imgHeight='h-44'
+      <CardRow img={Cannon} title='Canon Cmera EOS 2000, Black 10x zoom' price='$998.00' discount='$1128.00'
+          order='154 order' Fship='Free Shipping' para='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' details='View details'
         />
       </div>
       <div className='flex justify-end gap-3 my-6'>

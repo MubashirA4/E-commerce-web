@@ -8,6 +8,7 @@ import Laptop from '../../../assets/laptop.png'
 import Camera from '../../../assets/camera.png'
 import Headphone from '../../../assets/headphone.png'
 import Phone from '../../../assets/phone.png'
+import { Link } from 'react-router-dom'
 
 const Electronic = () => {
     return (
@@ -22,28 +23,44 @@ const Electronic = () => {
                 </div>
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full'>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Watch} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Watch} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Camera} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Camera} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Headphone} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Headphone} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Laptop} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Laptop} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Mixer} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Mixer} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Blender} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Blender} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Headphone} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Headphone} />
+                        </Link>
                     </div>
                     <div className=''>
-                        <Card2 title="Soft chairs" desc='From' price='USD 19' img={Phone} />
+                        <Link to='/orderdetail'>
+                            <Card2 title="Soft chairs" desc='From' price='USD 19' img={Phone} />
+                        </Link>
                     </div>
                 </div>
             </div>

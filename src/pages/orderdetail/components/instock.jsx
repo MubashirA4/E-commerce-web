@@ -146,10 +146,10 @@ const InStock = () => {
                         </div>
                     </div>
                     <div className='mt-5'>
-                        <button className="bg-white border border-customborder text-blue-600 hover:bg-blue-700 hover:text-white w-full font-medium py-1 px-4 my-2 rounded-md">
+                        <button className="bg-white border border-customborder text-blue-600 hover:bg-gradient-blue hover:text-white w-full font-medium py-1 px-4 my-2 rounded-md">
                             Send inquiry
                         </button>
-                        <button className="bg-white border border-customborder text-blue-600 hover:bg-blue-700 hover:text-white w-full font-medium py-1 px-4  rounded-md">
+                        <button className="bg-white border border-customborder text-blue-600 hover:bg-gradient-blue hover:text-white w-full font-medium py-1 px-4  rounded-md">
                             Seller’s profile
                         </button>
                     </div>

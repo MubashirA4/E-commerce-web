@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { IoMdStar } from "react-icons/io";
+import PriceRangeSlider from './sidebar/pricerange';
 
 
 const Sidebar = () => {
@@ -18,8 +19,9 @@ const Sidebar = () => {
             ...prev, [menu]: !prev[menu],
         }));
     }
+    
     return (
-        <div className='container mx-auto '>
+        <div className=''>
             <aside>
                 <ul className="">
                     {/* Category */}
@@ -40,11 +42,11 @@ const Sidebar = () => {
                         </div>
                         {isOpen.category && (
                             <ul className=" mt-4 space-y-2">
-                                <li className="font-regular text-base text-customGray2"><Link to='/'> Mobile accessory</Link></li>
-                                <li className="font-regular text-base text-customGray2"><Link to='/'> Electronics</Link></li>
-                                <li className="font-regular text-base text-customGray2"><Link to='/'> Smartphones</Link></li>
-                                <li className="font-regular text-base text-customGray2"><Link to='/'> Modern tech</Link></li>
-                                <li className='font-regular text-base text-customLblue'><Link to='/'>See all</Link> </li>
+                                <li className="font-regular text-base text-customGray2"><Link to='/webgrid'> Mobile accessory</Link></li>
+                                <li className="font-regular text-base text-customGray2"><Link to='/productlist'> Electronics</Link></li>
+                                <li className="font-regular text-base text-customGray2"><Link to='/productlist'> Smartphones</Link></li>
+                                <li className="font-regular text-base text-customGray2"><Link to='/productlist'> Modern tech</Link></li>
+                                <li className='font-regular text-base text-customLblue'><Link to=''>See all</Link> </li>
                             </ul>
                         )}
                     </li>
@@ -135,26 +137,8 @@ const Sidebar = () => {
                     </li>
                     {/* Price Range */}
                     <li className=" py-2">
-                        <div className="flex items-center justify-between cursor-pointer border-t"
-                            onClick={() => toggleDown("range")} >
-                            <span className='font-semibold text-Primary text-base mt-2'>Price Range</span>
-                            <svg
-                                className={`w-4 h-4 transform transition-transform ${isOpen.range ? "rotate-180" : ""
-                                    }`}
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </div>
-                        {isOpen.range && (
-                            <ul className=" mt-4 space-y-2">
-                                <input type="range" name="" id="" />
-                            </ul>
-                        )}
-                    </li>
+                        <PriceRangeSlider/>
+                    </li>   
                     {/* Condition */}
                     <li className=" py-2">
                         <div className="flex items-center justify-between cursor-pointer border-t"
@@ -211,40 +195,40 @@ const Sidebar = () => {
                         {isOpen.ratings && (
                             <ul className=" mt-4 space-y-2">
                                 <li className="flex items-center font-regular text-base text-customGray2">
-                                    <input type="checkbox" name="" id="" className="w-4 h-4" />
+                                    <input type="checkbox" name="" id="" className="w-4 h-4 accent-blue-500" />
                                     <div className='flex ml-2 gap-0'>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
                                     </div>
                                 </li>
                                 <li className="flex items-center font-regular text-base text-customGray2">
-                                    <input type="checkbox" name="" id="" className="w-4 h-4" />
+                                    <input type="checkbox" name="" id="" className="w-4 h-4 accent-blue-500" />
                                     <div className='flex ml-2 gap-0'>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
                                         <IoMdStar className='text-background3 w-5 h-5'/>
                                     </div>
                                 </li>
                                 <li className="flex items-center font-regular text-base text-customGray2">
-                                    <input type="checkbox" name="" id="" className="w-4 h-4" />
+                                    <input type="checkbox" name="" id="" className="w-4 h-4 accent-blue-500" />
                                     <div className='flex ml-2 gap-0'>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
                                         <IoMdStar className='text-background3 w-5 h-5'/>
                                         <IoMdStar className='text-background3 w-5 h-5'/>
                                     </div>
                                 </li>
                                 <li className="flex items-center font-regular text-base text-customGray2">
-                                    <input type="checkbox" name="" id="" className="w-4 h-4" />
+                                    <input type="checkbox" name="" id="" className="w-4 h-4 accent-blue-500" />
                                     <div className='flex ml-2 gap-0'>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
-                                        <IoMdStar className='text-orange-500 w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
+                                        <IoMdStar className='text-customorange w-5 h-5'/>
                                         <IoMdStar className='text-background3 w-5 h-5'/>
                                         <IoMdStar className='text-background3 w-5 h-5'/>
                                         <IoMdStar className='text-background3 w-5 h-5'/>

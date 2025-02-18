@@ -23,7 +23,7 @@ const FeatureNav = () => {
 
                 </div>
                 <div>
-                    <select name="" id="" className='font-regular text-Primary text-base bg-white border border-customborder rounded-md p-1 w-32'>
+                    <select name="" id="" className='font-regular text-Primary text-base bg-white border border-customborder rounded-md focus:outline-none p-1 w-32'>
                         <option value="Featured" >Featured</option>
                     </select>
                 </div>

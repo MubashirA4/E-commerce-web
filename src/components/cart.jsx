@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const Cart = ({ image, title, size, color, material, seller, price, qty }) => {
+const Cart = ({ image, title, size, color, material, seller, price, qty, removeItem, onQtyChange }) => {
     return (
         <div>
             <section className='flex justify-between'>
@@ -17,22 +17,26 @@ const Cart = ({ image, title, size, color, material, seller, price, qty }) => {
                             <span> Seller: {seller} </span>    
                         </p>
                         <div className='my-2'>
-                        <button className='font-medium text-sm text-customred px-3 py-1 border border-customborder rounded-md mr-2'>Remove</button>
+                        <button className='font-medium text-sm text-customred px-3 py-1 border border-customborder rounded-md mr-2' onClick={removeItem}>Remove</button>
                         <button className='font-medium text-sm text-customLblue px-3 py-1 border border-customborder rounded-md '>Save for later</button>
                         </div>
-
                     </div>
                 </div>
                 <div>
-                <h4 className="font-medium text-Primary text-base text-right mb-2">{price}</h4>
-                <select name="" id="" className='font-regular text-base text-Primary p-1 w-28 border border-customborder rounded-md'>
-                    <option value="">Qty: {qty}</option>
-                </select>
+                    <h4 className="font-medium text-Primary text-base text-right mb-2">{price}</h4>
+                    <select
+                        value={qty}
+                        onChange={(e) => onQtyChange(parseInt(e.target.value))}
+                        className='font-regular text-base text-Primary p-1 w-28 border border-customborder rounded-md'
+                    >
+                        {[...Array(10)].map((_, index) => (
+                            <option key={index + 1} value={index + 1}>Qty: {index + 1}</option>
+                        ))}
+                    </select>
                 </div>
             </section>
-
         </div>
-    )
-}
+    );
+};
 
-export default Cart
+export default Cart;

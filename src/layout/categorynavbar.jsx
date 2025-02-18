@@ -27,7 +27,7 @@ const CategoryNavbar = () => {
                     <li>
                         <select className='w-28'>
                             <option value="Ship to">Ship to
-                                <img src={Flag2} alt="jjk" width="20" />
+                                {/* <img src={Flag2} alt="jjk" width="20" /> */}
                             </option>
                         </select>
                     </li>

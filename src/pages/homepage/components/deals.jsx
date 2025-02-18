@@ -37,7 +37,7 @@ const Deals = () => {
                 </div>
                 <div className='grid lg:grid-cols-5 lg:w-full'>
                     <div className="">
-                        <Link to='orderdetail'>
+                        <Link to='/orders'>
                             <Card image={Watch} title="Smart Matches" desc='-25%' />
                         </Link>
                     </div>

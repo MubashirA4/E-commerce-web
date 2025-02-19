@@ -1,15 +1,25 @@
-import React from 'react'
-import Card from '../../../components/card1'
-import Watch from '../../../assets/watch.png'
-import Laptop from '../../../assets/laptop.png'
-import Camera from '../../../assets/camera.png'
-import Headphone from '../../../assets/headphone.png'
-import Phone from '../../../assets/phone.png'
-import { Link } from 'react-router-dom'
-
-
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import Card from '../../../components/card1';
+import { CartContext } from '../../mycart/components/cartcontext';
+import Watch from '../../../assets/watch.png';
+import Laptop from '../../../assets/laptop.png';
+import Camera from '../../../assets/camera.png';
+import Headphone from '../../../assets/headphone.png';
+import Phone from '../../../assets/phone.png';
 
 const Deals = () => {
+    const { addItem } = useContext(CartContext); // Get addItem function from context
+
+    // Define product data
+    const products = [
+        { id: 1, image: Watch, title: "Smart Watch", price: 50, discount: "-25%" },
+        { id: 2, image: Laptop, title: "Laptop", price: 700, discount: "-15%" },
+        { id: 3, image: Camera, title: "GoPro Camera", price: 250, discount: "-40%" },
+        { id: 4, image: Headphone, title: "Headphones", price: 100, discount: "-25%" },
+        { id: 5, image: Phone, title: "Canon Camera", price: 500, discount: "-25%" },
+    ];
+
     return (
         <div className='container mx-auto bg-white'>
             <div className='flex flex-row border border-1 mt-6 rounded-md'>
@@ -17,56 +27,31 @@ const Deals = () => {
                     <h4 className='font-semibold text-gray-800'>Deals and offers</h4>
                     <p className='text-gray-500'>Hygiene equipments</p>
                     <div className='flex flex-row gap-2 mt-3'>
-                        <div className='bg-neutral-600 text-white px-3 py-1 rounded-md w-fit text-center'>
-                            <span className='font-bold text-lg'> 04 </span> <br />
-                            <span className='font-sans text-sm'> Days</span>
-                        </div>
-                        <div className='bg-neutral-600 text-white px-3 py-1 rounded-md w-fit text-center'>
-                            <span className='font-bold text-lg'> 04 </span> <br />
-                            <span className='font-sans text-sm'> Days</span>
-                        </div>
-                        <div className='bg-neutral-600 text-white px-3 py-1 rounded-md w-fit text-center'>
-                            <span className='font-bold text-lg'> 04 </span> <br />
-                            <span className='font-sans text-sm'> Days</span>
-                        </div>
-                        <div className='bg-neutral-600 text-white px-3 py-1 rounded-md w-fit text-center'>
-                            <span className='font-bold text-lg'> 04 </span> <br />
-                            <span className='font-sans text-sm'> Days</span>
-                        </div>
+                        {[...Array(4)].map((_, i) => (
+                            <div key={i} className='bg-neutral-600 text-white px-3 py-1 rounded-md w-fit text-center'>
+                                <span className='font-bold text-lg'> 04 </span> <br />
+                                <span className='font-sans text-sm'> Days</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
+
+                {/* Product Grid */}
                 <div className='grid lg:grid-cols-5 lg:w-full'>
-                    <div className="">
-                        <Link to='/orders'>
-                            <Card image={Watch} title="Smart Matches" desc='-25%' />
-                        </Link>
-                    </div>
-                    <div className="">
-                        <Link to='orderdetail'>
-                            <Card image={Laptop} title="Laptops" desc='-15%' />
-                        </Link>
-                    </div>
-                    <div className="">
-                        <Link to='orderdetail'>
-                            <Card image={Camera} title="GoPro cameras" desc='-40%' />
-                        </Link>
-                    </div>
-                    <div className="">
-                        <Link to='orderdetail'>
-                            <Card image={Headphone} title="Headphones" desc='-25%' />
-                        </Link>
-                    </div>
-                    <div className="">
-                        <Link to='orderdetail'>
-                            <Card image={Phone} title="Canon cameras" desc='-25%' />
-                        </Link>
-                    </div>
+                    {products.map((product) => (
+                        <div key={product.id} className="">
+                            <Link
+                                to='/orders'
+                                onClick={() => addItem({ ...product, qty: 1 })} // Add to cart before navigating
+                            >
+                                <Card image={product.image} title={product.title} desc={product.discount} />
+                            </Link>
+                        </div>
+                    ))}
                 </div>
             </div>
-
-
         </div>
-    )
-}
+    );
+};
 
-export default Deals
+export default Deals;

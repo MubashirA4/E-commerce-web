@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Brand from '../../../components/brand'
 import { Services } from '../../../components/services'
 import Region from '../../../components/region'
@@ -22,17 +22,37 @@ import ArrowIcon from '../../../assets/services/Vector2.png'
 import DefenceIcon from '../../../assets/services/security2.png'
 import UAE from '../../../assets/region/UAE flag.png'
 import { Link } from 'react-router-dom'
+import { CartContext } from '../../mycart/components/cartcontext'
+import { desc, image, title } from 'framer-motion/client'
 
 
 export const Recommended = () => {
+    const {addItem, setSelectedProduct} = useContext(CartContext)
+
+    const Product = [
+        {id:1, image: Tshirt, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:2, image: Tshirt, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Tshirt, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+    ]
+    const handleProductClick = (product) => {
+        // Set the selected product in context
+        setSelectedProduct({...product, qty: 1});
+        // Optionally add the product to cart
+        addItem({...product, qty: 1});
+    }
+
     return (
         <div className='container mx-auto'>
             <div className='mt-3'>
                 <h4 className='font-semibold text-xl text-Primary'>Recommended items</h4>
                 <div className='grid lg:grid-cols-5 gap-5 mt-4'>
-                    <Link to='/orderdetail'>
-                        <Brand image={Tshirt} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
+                    {Product.map((product) => (
+                    <div key={product.id}>
+                        <Link to='/orders' onClick={() => handleProductClick(product)}>
+                        <Brand image={product.image} title={product.price} desc={product.desc}  className='flex flex-col justify-between py-4' />
                     </Link>
+                    </div>
+                    ))}
                     <Link to='/orderdetail'>
                         <Brand image={Jacket} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
                     </Link>

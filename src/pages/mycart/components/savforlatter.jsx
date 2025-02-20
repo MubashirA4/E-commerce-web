@@ -42,7 +42,11 @@ const SaveForLatter = () => {
                 <h4 className='font-semibold text-xl text-Primary'>Saved for later</h4>
                 <div className='flex gap-4 mt-4'>
                 <div>
-                    <MoveToCart image={Mobile} titleprice='99.50' desc='GoPro HERO6 4K Action Camera - Black' />
+                    <MoveToCart 
+                    image={Mobile} 
+                    titleprice='99.50'
+                     desc='GoPro HERO6 4K Action Camera - Black'
+                    />
                 </div>
                 <div>
                     <MoveToCart image={Mobile} titleprice='99.50' desc='GoPro HERO6 4K Action Camera - Black' />

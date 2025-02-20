@@ -52,9 +52,8 @@ const Landing = () => {
                                     <br />
                                     <span className="font-bold text-3xl">Electronic items</span>
                                 </h4>
-                                <div className="bg-white mt-3 px-3 py-2 rounded-md w-fit flex items-center hover:bg-gradient-blue hover:text-white">
-                                    <Link to='/' className="font-medium text-sm  ">Learn more</Link>
-                                </div>
+                                <button type="button" class="text-Primary bg-white hover:text-white  hover:bg-gradient-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-2  dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Learn more</button>
+
                             </div>
                         </div>
                     </main>

@@ -42,8 +42,8 @@ const MyCart = () => {
 
         addToWishlist(item);
         // Optionally remove item from cart:
-        // removeItem(item.id);
         navigate("/wishlist");
+        removeItem(item.id);
     };
 
     return (

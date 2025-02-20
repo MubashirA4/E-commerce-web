@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "axios": "^1.7.9",
     "cleave.js": "^1.6.0",
     "cra-template": "1.2.0",

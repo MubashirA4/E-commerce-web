@@ -2,7 +2,7 @@ import React from 'react'
 import { IoCartOutline } from "react-icons/io5";
 
 
-const MoveToCart = ({ image, titleprice, desc }) => {
+const MoveToCart = ({ image, titleprice, desc, onAddToCart }) => {
     return (
         <div className="">
             <div className="flex items-center justify-center border border-customborder rounded-sm">
@@ -11,7 +11,9 @@ const MoveToCart = ({ image, titleprice, desc }) => {
             <div className="flex flex-col gap-1 mt-2">
                 <h4 className="font-semibold text-lg text-Primary">${titleprice}</h4>
                 <p className="font-regular text-base text-customGray pr-4">{desc}</p>
-                <button className='flex items-center justify-evenly w-32 h-8 border border-customborder rounded-md  text-customLblue'>
+                <button className='flex items-center justify-evenly w-32 h-8 border border-customborder rounded-md  text-customLblue'
+                    onClick={onAddToCart}
+                >
                     <IoCartOutline size={20} />
                     <span className='font-medium text-base'>Move to cart</span>
                 </button>

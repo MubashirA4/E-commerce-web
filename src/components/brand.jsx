@@ -7,7 +7,7 @@ const Brand = ({image, title, desc, className=''}) => {
         <img src={image} alt="" className="w-32 " />
       </div>
       <div className='pl-4 mt-4'>
-        <h4 className="font-medium text-Primary text-lg">{title}</h4>
+        <h4 className="font-medium text-Primary text-lg">$ {title}</h4>
         <p className='font-regular text-[#8B96A5]'>{desc} </p>
       </div>
     </div>

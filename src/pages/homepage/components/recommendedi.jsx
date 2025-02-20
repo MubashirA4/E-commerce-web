@@ -31,8 +31,15 @@ export const Recommended = () => {
 
     const Product = [
         {id:1, image: Tshirt, price: 10.30, desc:'T-shirts with multiple colors, for men' },
-        {id:2, image: Tshirt, price: 10.30, desc:'T-shirts with multiple colors, for men' },
-        {id:3, image: Tshirt, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:2, image: Jacket, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Purse, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Bag, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Coat, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Shorts, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Headphone, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Watch, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Phone, price: 10.30, desc:'T-shirts with multiple colors, for men' },
+        {id:3, image: Camera, price: 10.30, desc:'T-shirts with multiple colors, for men' },
     ]
     const handleProductClick = (product) => {
         // Set the selected product in context
@@ -53,33 +60,7 @@ export const Recommended = () => {
                     </Link>
                     </div>
                     ))}
-                    <Link to='/orderdetail'>
-                        <Brand image={Jacket} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Purse} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Bag} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Coat} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Shorts} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Headphone} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4'/>
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Watch} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Phone} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
-                    </Link>
-                    <Link to='/orderdetail'>
-                        <Brand image={Camera} title='$10.30' desc='T-shirts with multiple colors, for men' className='flex flex-col justify-between py-4' />
-                    </Link>
+                    
                 </div>
             </div>
             <div className='mt-3'>

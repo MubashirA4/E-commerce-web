@@ -39,7 +39,7 @@ const Home = () => {
                 <img src={Decoration1} alt="" width={360} />
                 <div className='absolute top-6 left-5'>
                     <h4 className='font-semibold text-gray-800 text-2xl'>Home and <br /> outdoor</h4>
-                    <button className='font-medium text-sm text-gray-800 bg-white px-6 py-2 rounded-md mt-3'>Source now</button>
+                      <button type="button" class="text-Primary bg-white hover:text-white  hover:bg-gradient-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-2  dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Source now</button>
                 </div>
             </div>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 w-full'>

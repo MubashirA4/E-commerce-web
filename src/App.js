@@ -27,14 +27,15 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/productlist" element={<ProductList />} />
               <Route path="/webgrid" element={<WebGrid />} />
-              <Route path="/orders" element={<OrderDetail />} />
-              <Route path="/cart" element={<WebCart />} />
               <Route path="/checkout" element={<CheckOutPage />} />
+                <Route path="/cart" element={<WebCart />} />
+                <Route path="/orders" element={<OrderDetail />} />
               <Route path="/signin" element={<Signin />} />
               <Route path="/register" element={<Signup />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route element={<ProtectedRoute />}>
                 <Route path="/dashboard" element={<Dashboard />} />
+
               </Route>
               <Route path="/wishlist" element={<WishlistPage />} />
             </Routes>

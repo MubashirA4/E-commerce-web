@@ -9,7 +9,7 @@ const Card = ({ image, title, desc }) => {
         <h4 className="font-sans text-gray-800 text-center">{title}</h4>
       </div>
       <div className="bg-pink-200 w-fit rounded-xl px-3 flex items-center justify-center my-4">
-        <p className="text-red-600 font-medium">{desc}</p>
+        <p className="text-red-600 font-medium">{desc}%</p>
       </div>
     </div>
     </>

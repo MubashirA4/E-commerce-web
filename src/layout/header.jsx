@@ -74,7 +74,7 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <Link to="/messages">
+              <Link to="/">
                 <img src={MessageIcon} alt="Messages" width={50} />
               </Link>
             </li>

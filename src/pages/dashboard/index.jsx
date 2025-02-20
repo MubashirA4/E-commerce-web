@@ -13,7 +13,7 @@ const Dashboard = () => {
   const handleLogout = () => {
     localStorage.removeItem('authToken');
     localStorage.removeItem('user');
-    navigate('/login');
+    navigate('/');
   };
 
   return (

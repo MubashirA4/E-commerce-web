@@ -23,7 +23,7 @@ const Signin = ({ onSuccess, switchToForgot }) => {
 
   return (
     <div className='container mx-auto'>
-      <h2 className="text-xl font-semibold mb-4">Sign In</h2>
+      <h2 className="text-xl text-center font-semibold mb-4">Sign In</h2>
       {error && <p className="text-red-500">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-2">

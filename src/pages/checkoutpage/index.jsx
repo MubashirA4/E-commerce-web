@@ -142,7 +142,7 @@ const CheckoutPage = () => {
     };
 
   return (
-    <div className="container mx-auto p-6 bg-white shadow-lg rounded-md">
+    <div className="container mx-auto p-6 mt-4 bg-white shadow-lg rounded-md">
       <div className="flex justify-between mb-4">
         {["Shipping", "Billing", "Payment", "Review"].map((label, index) => (
           <span key={index} className={`text-sm ${step > index + 1 ? "text-green-500" : "text-gray-500"}`}>{label}</span>

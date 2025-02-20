@@ -68,8 +68,8 @@ export const Recommended = () => {
                 <div className='grid grid-cols-4 gap-4'>
                     <Services Icon={SearchIcon} image={Sourehub} desc1='Source from' desc2='Industry Hub' />
                     <Services Icon={InventoryIcon} image={Colors} desc1='Customize Your' desc2='Products' />
-                    <Services Icon={ArrowIcon} image={Aeroplane} desc1='yyhgjhgj' />
-                    <Services Icon={DefenceIcon} image={Man} desc1='yyhgjhgj' />
+                    <Services Icon={ArrowIcon} image={Aeroplane} desc1='Fast, reliable shipping by ocean or air' />
+                    <Services Icon={DefenceIcon} image={Man} desc1='Product monitoring and inspection' />
                 </div>
             </div>
             <div>

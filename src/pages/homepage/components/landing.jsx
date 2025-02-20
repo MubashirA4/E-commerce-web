@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CategoryNavbar from '../../../layout/categorynavbar'
 import { Link } from 'react-router-dom'
 import Banner from '../../../assets/Banner-board.png'
 import Profile from '../../../assets/profile(1).png'
+import AuthModal from '../../Signin/auth'
 
 const Landing = () => {
+    const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+    const [initialAuthType, setInitialAuthType] = useState('login'); // 'login' or 'register'
+
+    const openModal = (type) => {
+        setInitialAuthType(type);
+        setIsAuthModalOpen(true);
+    };
     return (
         <>
             <CategoryNavbar />
+            {/* Sidebar */}
             <main className='bg-background'>
                 <section className='container mx-auto bg-white flex flex-row gap-2 justify-between  border p-4 mt-4 border-gray-200 rounded-lg'>
                     <aside className='w-1/5'>
@@ -41,6 +50,7 @@ const Landing = () => {
                             </li>
                         </ul>
                     </aside>
+                    {/* Banner */}
                     <main className="w-3/5">
                         <div className="relative">
                             <div className="flex  justify-center items-center">
@@ -57,20 +67,34 @@ const Landing = () => {
                             </div>
                         </div>
                     </main>
+                    {/* Promo */}
                     <div className='w-1/5 '>
-                        <div className="bg-lightBlue p-4 rounded-md  ">
+                        <div className="bg-lightBlue px-4 py-2 rounded-md  ">
                             <div className="flex flex-row gap-3 items-center">
                                 <div className="bg-blue-300 rounded-full p-2">
                                     <img src={Profile} alt="" width={24} />
                                 </div>
                                 <p className="font-sans">Hi, user <br /> let’s get stated</p>
                             </div>
-                            <button className="bg-white text-blue-600 hover:bg-gradient-blue hover:text-white w-full font-medium py-1 px-4 my-2 rounded-md">
-                                Join Now
-                            </button>
-                            <button className="bg-white text-blue-600 hover:bg-gradient-blue hover:text-white w-full font-medium py-1 px-4 rounded-md">
-                                Log in
-                            </button>
+                            <div>
+                                <div className="hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mt-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+                                    <button onClick={() => openModal('register')}>
+                                        Join now
+                                    </button>
+                                </div>
+                                <div className="hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mt-1 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">
+                                    <button onClick={() => openModal('login')}>
+                                        Log in
+                                    </button>
+                                </div>
+                                {isAuthModalOpen && (
+                                    <AuthModal
+                                        isOpen={isAuthModalOpen}
+                                        onClose={() => setIsAuthModalOpen(false)}
+                                        initialAuthType={initialAuthType}
+                                    />
+                                )}
+                            </div>
                         </div>
                         <div className='bg-orange py-4 px-4 mt-2 rounded-md'>
                             <p className='font-sans text-white line leading-tight'>Get US $10 off <br /> with a new <br /> supplier</p>

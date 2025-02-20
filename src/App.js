@@ -18,8 +18,6 @@ import WishlistPage from "./pages/wishlist/wishlist.jsx";
 function App() {
   return (
     <CartProvider>
-      {" "}
-      {/* Wrap everything inside CartProvider */}
       <WishlistProvider>
         <div className="App bg-background">
           <Layout>
@@ -35,7 +33,6 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route element={<ProtectedRoute />}>
                 <Route path="/dashboard" element={<Dashboard />} />
-
               </Route>
               <Route path="/wishlist" element={<WishlistPage />} />
             </Routes>

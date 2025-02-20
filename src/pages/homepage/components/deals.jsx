@@ -16,7 +16,7 @@ const Deals = () => {
         { id: 1, image: Watch, title: "Smart Watch", price: 50, discount: 25},
         { id: 2, image: Laptop, title: "Laptop", price: 700, discount: 15 },
         { id: 3, image: Camera, title: "GoPro Camera", price: 250, discount: 40 },
-        { id: 4, image: Headphone, title: "Headphones", price: 100, discount: -25},
+        { id: 4, image: Headphone, title: "Headphones", price: 100, discount: 25},
         { id: 5, image: Phone, title: "Canon Camera", price: 500, discount:25 },
     ];
 

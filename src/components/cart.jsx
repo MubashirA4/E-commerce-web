@@ -1,24 +1,27 @@
 import React from 'react';
 
-const Cart = ({ image, title, size, color, material, seller, price, qty, removeItem, onQtyChange }) => {
+const Cart = ({ image, title, size, color, material, seller, price, qty, removeItem, addItem, onQtyChange }) => {
     return (
         <div>
             <section className='flex justify-between'>
                 <div className='flex gap-3'>
-                    <div className={`flex flex-col items-center my-2 h-fit p-1 border border-customborder rounded-sm `}>
-                        <img src={image} alt="" className="w-14 " />
+                    <div className={`flex flex-col items-center my-2 h-fit p-1 border border-customborder rounded-sm`}>
+                        <img src={image} alt={title} className="w-14" />
                     </div>
                     <div>
                         <h4 className="font-regular text-Primary text-base">{title}</h4>
                         <p className='font-regular text-[#8B96A5] text-base'>
-                            size: {size},
-                            <span> Color: {color}, </span>    
-                            <span> Material: {material}, </span> <br />   
-                            <span> Seller: {seller} </span>    
+                            Size: {size}, <span>Color: {color}, </span>    
+                            <span>Material: {material}, </span><br />   
+                            <span>Seller: {seller}</span>    
                         </p>
                         <div className='my-2'>
-                        <button className='font-medium text-sm text-customred px-3 py-1 border border-customborder rounded-md mr-2' onClick={removeItem}>Remove</button>
-                        <button className='font-medium text-sm text-customLblue px-3 py-1 border border-customborder rounded-md '>Save for later</button>
+                            <button className='font-medium text-sm text-customred px-3 py-1 border border-customborder rounded-md mr-2' onClick={removeItem}>
+                                Remove
+                            </button>
+                            <button className='font-medium text-sm text-customLblue px-3 py-1 border border-customborder rounded-md' onClick={addItem}>
+                                Save for later
+                            </button>
                         </div>
                     </div>
                 </div>

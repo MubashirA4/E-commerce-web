@@ -6,6 +6,7 @@ export const CartContext = createContext();
 // Provider Component
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null); // New state for selected product
 
     // Load cart from localStorage on mount
     useEffect(() => {
@@ -48,8 +49,11 @@ export const CartProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cartItems, addItem, removeItem, updateQuantity }}>
-            {children}
-        </CartContext.Provider>
+        <CartContext.Provider
+        value={{ cartItems, addItem, removeItem, updateQuantity, selectedProduct, setSelectedProduct }}
+      >
+        {children}
+      </CartContext.Provider>
+  
     );
 };

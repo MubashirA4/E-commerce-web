@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { CartContext } from './cartcontext';
+import { WishlistContext } from '../../../contexts/wishlistcontext';
 import Cart from '../../../components/cart';
 import { IoMdArrowBack } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,21 +8,43 @@ import Billing from '../../../components/carts/billing';
 
 const MyCart = () => {
     const { cartItems, removeItem, updateQuantity } = useContext(CartContext);
+    const { addToWishlist } = useContext(WishlistContext);
     const navigate = useNavigate();
 
     const taxRate = 0.1;
-    const discount = 60.00;
 
-    // Calculate Summary
+    // Calculate Summary using discountPercent for each product
     const calculateSummary = () => {
         let subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.qty), 0);
-        let tax = subtotal * taxRate;
-        let effectiveDiscount = cartItems.length > 0 ? discount : 0;
-        let total = subtotal - effectiveDiscount + tax;
-        return { subtotal, tax, total, effectiveDiscount };
+        
+        let totalDiscount = cartItems.reduce((acc, item) => {
+            let discountPercent = 0;
+            if (typeof item.discount === "string") {
+              discountPercent = Math.abs(parseFloat(item.discount.replace(/[^0-9.]/g, "")));
+            } else if (typeof item.discount === "number") {
+              discountPercent = item.discount;
+            }
+            discountPercent = discountPercent / 100;
+            const discountForItem = item.price * discountPercent * item.qty;
+            return acc + discountForItem;
+        }, 0);
+        
+        let tax = (subtotal - totalDiscount) * taxRate;
+        let total = subtotal - totalDiscount + tax;
+        return { subtotal, tax, total, effectiveDiscount: totalDiscount };
     };
 
     const { subtotal, tax, total, effectiveDiscount } = calculateSummary();
+
+    // Handler for adding an item to the wishlist.
+    const handleSaveForLater = (item) => {
+        console.log("Saving item to wishlist:", item);
+
+        addToWishlist(item);
+        // Optionally remove item from cart:
+        // removeItem(item.id);
+        navigate("/wishlist");
+    };
 
     return (
         <>
@@ -37,6 +60,7 @@ const MyCart = () => {
                                     price={`$${item.price.toFixed(2)}`}
                                     qty={item.qty}
                                     removeItem={() => removeItem(item.id)}
+                                    addItem={() => handleSaveForLater(item)}
                                     onQtyChange={(newQty) => updateQuantity(item.id, newQty)}
                                 />
                                 <hr className='border border-customborder my-4' />
@@ -50,7 +74,13 @@ const MyCart = () => {
                         </div>
                     </div>
                 </section>
-                <Billing subtotal={subtotal} tax={tax} total={total} discount={effectiveDiscount} cartItems={cartItems} />
+                <Billing 
+                  subtotal={subtotal} 
+                  tax={tax} 
+                  total={total} 
+                  discount={effectiveDiscount} 
+                  cartItems={cartItems} 
+                />
             </main>
         </>
     );

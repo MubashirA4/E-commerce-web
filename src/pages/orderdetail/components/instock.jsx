@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
-
-// Importing images
+import { CartContext } from '../../mycart/components/cartcontext';
 import Tshirt from '../../../assets/Clothes/Tshirt(gray).png'
 import Review from '../../../assets/Vector(review).png'
 import Gflag from '../../../assets/flag.png'
-
 // Importing icons from react-icons
 import { IoMdCheckmark, IoMdStar } from "react-icons/io";
 import { MdOutlineShoppingBasket, MdOutlineVerifiedUser } from "react-icons/md";
@@ -13,8 +11,12 @@ import { TbWorld } from "react-icons/tb";
 import { FaRegHeart } from "react-icons/fa";
 
 const InStock = () => {
+    const { selectedProduct } = useContext(CartContext);
     const navigate = useNavigate();
 
+    if (!selectedProduct) {
+        return <div>No product selected. Please go back and select a product.</div>;
+    }
     // Sample product data
     const product = {
         id: 1,
@@ -50,15 +52,15 @@ const InStock = () => {
             <div className='lg:w-80 xl:w-2/6'>
                 {/* Product Image */}
                 <div className='flex justify-center items-center bg-white border border-customborder rounded-md'>
-                    <img src={Tshirt} alt="Product" className='xl:w-80 py-5 lg:w-64 object-fit' />
+                    <img src={selectedProduct.image} alt={selectedProduct.title} className='xl:w-80 py-5 lg:w-64 object-fit' />
                 </div>
 
                {/* Thumbnail Images */}
                 <div className='flex gap-2 mt-3'>
                     {[...Array(6)].map((_, index) => ( // Rendering multiple thumbnails dynamically
                         <div key={index} className='border border-customborder rounded-md p-2 w-fit'>
-                            <img src={Tshirt} alt="Thumbnail" className='w-12' />
-                        </div>
+                            <img src={selectedProduct.image || Tshirt} alt="Thumbnail" className='w-12' />
+                            </div>
                     ))}
                 </div>
                 {/* Add tocart Button */}
@@ -81,7 +83,7 @@ const InStock = () => {
 
                     {/* Product title */}
                     <h4 className='font-semibold text-Primary text-xl'>
-                        Mens Long Sleeve T-shirt Cotton Base <br /> Layer Slim Muscle
+                    {selectedProduct.title}
                     </h4>
 
                     {/* Rating and Sales Information */}
@@ -114,7 +116,7 @@ const InStock = () => {
                     <div className='flex justify-between bg-backgroundpink p-3 mt-2'>
                         {[...Array(3)].map((_, index) => (
                             <div key={index} className='border-l border-l-customborder pl-2'>
-                                <h4 className='font-semibold text-lg text-Primary hover:text-customred'>$98.00</h4>
+                                <h4 className='font-semibold text-lg text-Primary hover:text-customred'>${selectedProduct.price}</h4>
                                 <p className='font-regular text-xs text-customGray2'>50-100 pcs</p>
                             </div>
                         ))}
